@@ -33,7 +33,7 @@ public class TorrentStreamerListener implements TorrentListener {
         WritableMap params = Arguments.createMap();
         params.putString("status", "OnStreamPrepared");
 
-        sendEvent("progress", params);
+        sendEvent("status", params);
     }
 
     @Override
@@ -41,7 +41,7 @@ public class TorrentStreamerListener implements TorrentListener {
         WritableMap params = Arguments.createMap();
         params.putString("status", "onStreamStarted");
 
-        sendEvent("progress", params);
+        sendEvent("status", params);
     }
 
     @Override
